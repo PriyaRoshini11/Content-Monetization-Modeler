@@ -1,10 +1,11 @@
 pandas
 numpy
-scikit-learn
+scikit-learn==1.6.1
 matplotlib
 seaborn
 scipy
-joblib
+joblibjoblib==1.4.2
 streamlit
 google-api-python-client
 isodate
+os
