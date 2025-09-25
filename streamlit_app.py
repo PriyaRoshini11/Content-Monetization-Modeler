@@ -7,13 +7,12 @@ import isodate
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-artifacts = joblib.load(os.path.join(BASE_DIR, "artifacts.pkl"))
 
 # ---------------- Load saved artifacts ----------------
-model = artifacts["model"]
-encoder = artifacts["encoder"]
-scaler = artifacts["scaler"]
-feature_names = artifacts["feature_names"]
+model = joblib.load(os.path.join(BASE_DIR, "best_gb_model.pkl"))
+encoder = joblib.load(os.path.join(BASE_DIR, "ordinal_encoder.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+feature_names = joblib.load(os.path.join(BASE_DIR, "feature_names.pkl"))
 
 
 st.set_page_config(page_title="YouTube Ad Revenue Predictor 🎥💰",page_icon="🎬",layout="wide",initial_sidebar_state="expanded")
@@ -143,5 +142,4 @@ else:
                 except Exception as e:
                     st.error(f"API error: {e}")
         else:
-
             st.error("Please enter a valid API key and YouTube link.")
