@@ -1,10 +1,10 @@
-scikit-learn
-joblib
-numpy
-scipy
-pandas
 matplotlib
 seaborn
 streamlit
 google-api-python-client
 isodate
+scikit-learn==X.X.X
+joblib==X.X.X
+numpy==X.X.X
+pandas==X.X.X
+scipy==X.X.X
