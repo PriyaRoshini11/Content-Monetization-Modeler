@@ -7,7 +7,7 @@ import isodate
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-artifacts = joblib.load(os.path.join(BASE_DIR, "artifacts.pkl"))
+artifacts = joblib.load(os.path.join(BASE_DIR,"models", "artifacts.pkl"))
 
 # ---------------- Load saved artifacts ----------------
 model = artifacts["model"]
