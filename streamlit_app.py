@@ -7,7 +7,7 @@ import isodate
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-artifacts = joblib.load(os.path.join(BASE_DIR,"models", "artifacts.pkl"))
+artifacts = joblib.load(os.path.join(BASE_DIR, "artifacts.pkl"))
 
 # ---------------- Load saved artifacts ----------------
 model = artifacts["model"]
@@ -143,4 +143,5 @@ else:
                 except Exception as e:
                     st.error(f"API error: {e}")
         else:
+
             st.error("Please enter a valid API key and YouTube link.")
