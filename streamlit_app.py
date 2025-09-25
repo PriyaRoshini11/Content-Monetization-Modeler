@@ -7,19 +7,13 @@ import isodate
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-def safe_load(filename):
-    path = os.path.join(BASE_DIR, filename)
-    if not os.path.exists(path):
-        st.error(f"❌ File not found: {filename}. Make sure it is uploaded to GitHub.")
-        st.stop()
-    return joblib.load(path)
+artifacts = joblib.load(os.path.join(BASE_DIR, "artifacts.pkl"))
 
 # ---------------- Load saved artifacts ----------------
-
-model = safe_load("best_gb_model.pkl")
-encoder = safe_load("ordinal_encoder.pkl")
-scaler = safe_load("scaler.pkl")
-feature_names = safe_load("feature_names.pkl")
+model = artifacts["model"]
+encoder = artifacts["encoder"]
+scaler = artifacts["scaler"]
+feature_names = artifacts["feature_names"]
 
 
 st.set_page_config(page_title="YouTube Ad Revenue Predictor 🎥💰",page_icon="🎬",layout="wide",initial_sidebar_state="expanded")
