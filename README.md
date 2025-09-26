@@ -5,7 +5,7 @@ Content Monetization Modeler - Machine Learning
 This project focuses on predicting YouTube Ad Revenue using **machine learning models**.  
 
 The final solution includes:
-- A trained regression model (XGBoosting)
+- A trained linear regression model
 - A **Streamlit Web App** for predictions
 - Data preprocessing and feature engineering pipeline
 - Documentation & insights
@@ -80,12 +80,12 @@ Engagement rate proved critical for revenue prediction
 **5. Model Building**
 Trained & compared 5 regression models:
 Linear Regression
-Random Forest Regressor
-Gradient Boosting Regressor
-XGBoost Regressor ✅ (final model used)
-Decision Tree Regressor (baseline)
+DecisionTreeRegressor
+KNeighborsRegressor
+ElasticNet
+RandomForestRegressor
 
-Best model: XGBoost (after hyperparameter tuning)
+Best model: Linear Regression
 
 Performance:
 R² ≈ 0.95
