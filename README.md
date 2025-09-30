@@ -92,6 +92,18 @@ from xgboost import XGBRegressor
 
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
+# Preprocessing & Pipelines
+
+from sklearn.compose import ColumnTransformer
+
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+from sklearn.pipeline import Pipeline
+
+# Statistics
+
+from scipy import stats
+
 **Approach:**
 
 **1. Data Extraction & Understanding**
@@ -114,11 +126,9 @@ Normalized/Scaled features where needed
 
 **3. Feature Engineering**
 
-Engagement Rate = (likes + comments) / views
+engagement rate = (likes+comments)/views
 
-Watch per View = watch_time_minutes / views
-
-Views per Minute = views / video_length_minutes
+avg_watch_time_per_view = watch_time_minutes/ views
 
 **4. Exploratory Data Analysis (EDA)**
 
@@ -140,12 +150,12 @@ GradientBoostingRegressor
 
 XGBRegressor
 
-Best model: XGBRegressor
+Best model: Linear Regression
 
 Performance:
-R² ≈ 0.95
-RMSE ≈ 13.7
-MAE ≈ 3.8
+R² ≈ 0.953
+RMSE ≈ 13.480
+MAE ≈ 3.111
 
 **6. Deployment (Streamlit App)**
 
@@ -163,13 +173,14 @@ Simple, interactive UI with metrics display
 
 **Manual Input:**
 
-<img width="1917" height="1011" alt="image" src="https://github.com/user-attachments/assets/cffe1b95-c87a-496f-ad2a-a1a4ad55844d" />
+<img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/cc05e1f1-b5a6-4e27-b39d-0c4c32c9abb7" />
 
-<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/4cb23260-c3f3-4250-aed6-c07425b20566" />
+<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/e54157d9-133a-4111-a2f3-fa71d08c6a00" />
 
 **Youtube Link:**
 
-<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/5a2b6f9c-493f-4cb4-8097-fc849bf6d574" />
+<img width="1908" height="996" alt="image" src="https://github.com/user-attachments/assets/aea55c60-1467-4c02-aa14-6d0983fb1036" />
+
 
 
 
